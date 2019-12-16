@@ -1,0 +1,19 @@
+"PERIODO","N_DIA_LABORAL","CONTEO.x","CONTEO.y","promedio_acc_dia"
+2014,"Festivo",1343,14,96
+2014,"Fin de semana",4209,104,40
+2014,"Laboral",36042,247,146
+2015,"Festivo",1447,16,90
+2015,"Fin de semana",4048,104,39
+2015,"Laboral",36585,245,149
+2016,"Festivo",1394,15,93
+2016,"Fin de semana",3986,105,38
+2016,"Laboral",37461,246,152
+2017,"Festivo",1472,15,98
+2017,"Fin de semana",3917,105,37
+2017,"Laboral",37174,245,152
+2018,"Festivo",1353,16,85
+2018,"Fin de semana",3689,104,35
+2018,"Laboral",35306,245,144
+2019,"Festivo",459,8,57
+2019,"Fin de semana",1741,52,33
+2019,"Laboral",16913,121,140

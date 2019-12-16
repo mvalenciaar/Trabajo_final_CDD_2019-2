@@ -1,0 +1,31 @@
+"BARRIO","GRAVEDAD","CONTEO","TOTAL"
+"La Candelaria","Herido",3148,7614
+"La Candelaria","Muerto",37,7614
+"La Candelaria","Solo danos",4429,7614
+"Castilla","Herido",4070,6899
+"Castilla","Muerto",49,6899
+"Castilla","Solo danos",2780,6899
+"Caribe","Herido",2436,4802
+"Caribe","Muerto",27,4802
+"Caribe","Solo danos",2339,4802
+"Robledo","Herido",2673,4620
+"Robledo","Muerto",21,4620
+"Robledo","Solo danos",1926,4620
+"Campo Amor","Herido",2136,4591
+"Campo Amor","Muerto",25,4591
+"Campo Amor","Solo danos",2430,4591
+"Perpetuo Socorro","Herido",2091,4522
+"Perpetuo Socorro","Muerto",19,4522
+"Perpetuo Socorro","Solo danos",2412,4522
+"Los Conquistadores","Herido",1776,4065
+"Los Conquistadores","Muerto",22,4065
+"Los Conquistadores","Solo danos",2267,4065
+"Barrio Colon","Herido",1563,4000
+"Barrio Colon","Muerto",18,4000
+"Barrio Colon","Solo danos",2419,4000
+"Guayaquil","Herido",1498,3777
+"Guayaquil","Muerto",34,3777
+"Guayaquil","Solo danos",2245,3777
+"San Benito","Herido",1586,3703
+"San Benito","Muerto",30,3703
+"San Benito","Solo danos",2087,3703

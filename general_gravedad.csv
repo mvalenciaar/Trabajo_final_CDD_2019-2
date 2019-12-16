@@ -1,0 +1,827 @@
+"BARRIO","GRAVEDAD","CONTEO"
+"","Herido",92
+"","Solo danos",172
+"0","Herido",1
+"0","Solo danos",3
+"6001","Herido",31
+"6001","Muerto",1
+"6001","Solo danos",11
+"7001","Herido",13
+"7001","Solo danos",5
+"9004","Herido",1
+"9004","Solo danos",1
+"9086","Herido",2
+"Aguas Frias","Herido",67
+"Aguas Frias","Solo danos",25
+"Aldea Pablo VI","Herido",68
+"Aldea Pablo VI","Muerto",2
+"Aldea Pablo VI","Solo danos",18
+"Alejandria","Herido",153
+"Alejandria","Muerto",1
+"Alejandria","Solo danos",399
+"Alejandro Echavarria","Herido",654
+"Alejandro Echavarria","Muerto",3
+"Alejandro Echavarria","Solo danos",269
+"Alfonso Lopez","Herido",829
+"Alfonso Lopez","Muerto",7
+"Alfonso Lopez","Solo danos",397
+"Altamira","Herido",523
+"Altamira","Muerto",2
+"Altamira","Solo danos",295
+"Altavista","Herido",220
+"Altavista","Muerto",3
+"Altavista","Solo danos",146
+"Altavista Sector Central","Herido",95
+"Altavista Sector Central","Muerto",5
+"Altavista Sector Central","Solo danos",24
+"Altos del Poblado","Herido",135
+"Altos del Poblado","Solo danos",147
+"Andalucia","Herido",172
+"Andalucia","Muerto",6
+"Andalucia","Solo danos",84
+"Antonio Narino","Herido",199
+"Antonio Narino","Muerto",1
+"Antonio Narino","Solo danos",56
+"Aranjuez","Herido",1139
+"Aranjuez","Muerto",12
+"Aranjuez","Solo danos",828
+"Area De Expansion Altavista","Herido",43
+"Area De Expansion Altavista","Solo danos",9
+"area de Expansion Altos de Calasanz","Herido",54
+"area de Expansion Altos de Calasanz","Muerto",1
+"area de Expansion Altos de Calasanz","Solo danos",57
+"Area De Expansion Belen Rincon","Herido",7
+"Area De Expansion Belen Rincon","Solo danos",7
+"area de Expansion Pajarito","Herido",620
+"area de Expansion Pajarito","Muerto",9
+"area de Expansion Pajarito","Solo danos",199
+"area de Expansion San Antonio de Prado","Herido",44
+"area de Expansion San Antonio de Prado","Muerto",2
+"area de Expansion San Antonio de Prado","Solo danos",18
+"Asomadera Nº 1","Herido",195
+"Asomadera Nº 1","Muerto",4
+"Asomadera Nº 1","Solo danos",287
+"Asomadera Nº 2","Herido",194
+"Asomadera Nº 2","Muerto",1
+"Asomadera Nº 2","Solo danos",352
+"Asomadera Nº 3","Herido",65
+"Asomadera Nº 3","Muerto",1
+"Asomadera Nº 3","Solo danos",86
+"Astorga","Herido",106
+"Astorga","Solo danos",204
+"AUC1","Herido",14
+"AUC1","Muerto",1
+"AUC1","Solo danos",2
+"AUC2","Herido",1
+"AUC2","Solo danos",1
+"Aures Nº 1","Herido",402
+"Aures Nº 1","Muerto",3
+"Aures Nº 1","Solo danos",109
+"Aures Nº 2","Herido",516
+"Aures Nº 2","Muerto",2
+"Aures Nº 2","Solo danos",126
+"Barrio Colombia","Herido",567
+"Barrio Colombia","Muerto",7
+"Barrio Colombia","Solo danos",740
+"Barrio Colon","Herido",1563
+"Barrio Colon","Muerto",18
+"Barrio Colon","Solo danos",2419
+"Barrio Cristobal","Herido",97
+"Barrio Cristobal","Muerto",1
+"Barrio Cristobal","Solo danos",71
+"Barrios de Jesus","Herido",216
+"Barrios de Jesus","Muerto",4
+"Barrios de Jesus","Solo danos",101
+"Batallon Girardot","Herido",12
+"Batallon Girardot","Solo danos",2
+"Belalcazar","Herido",349
+"Belalcazar","Muerto",4
+"Belalcazar","Solo danos",270
+"Belen","Herido",1132
+"Belen","Muerto",7
+"Belen","Solo danos",1527
+"Belencito","Herido",119
+"Belencito","Muerto",2
+"Belencito","Solo danos",43
+"Bello Horizonte","Herido",240
+"Bello Horizonte","Muerto",1
+"Bello Horizonte","Solo danos",118
+"Berlin","Herido",600
+"Berlin","Muerto",5
+"Berlin","Solo danos",293
+"Bermejal - Los alamos","Herido",175
+"Bermejal - Los alamos","Muerto",2
+"Bermejal - Los alamos","Solo danos",77
+"Betania","Herido",86
+"Betania","Muerto",2
+"Betania","Solo danos",28
+"Blanquizal","Herido",71
+"Blanquizal","Muerto",1
+"Blanquizal","Solo danos",29
+"Bolivariana","Herido",502
+"Bolivariana","Muerto",4
+"Bolivariana","Solo danos",515
+"Bombona Nº 1","Herido",608
+"Bombona Nº 1","Muerto",8
+"Bombona Nº 1","Solo danos",727
+"Bombona Nº 2","Herido",225
+"Bombona Nº 2","Muerto",3
+"Bombona Nº 2","Solo danos",149
+"Bosques de San Pablo","Herido",200
+"Bosques de San Pablo","Muerto",1
+"Bosques de San Pablo","Solo danos",194
+"Boston","Herido",1276
+"Boston","Muerto",13
+"Boston","Solo danos",1176
+"Boyaca","Herido",407
+"Boyaca","Muerto",2
+"Boyaca","Solo danos",231
+"Brasilia","Herido",395
+"Brasilia","Muerto",5
+"Brasilia","Solo danos",151
+"Buenos Aires","Herido",650
+"Buenos Aires","Solo danos",423
+"Buga Patio Bonito","Herido",28
+"Buga Patio Bonito","Solo danos",21
+"Cabecera San Antonio de Prado","Herido",1206
+"Cabecera San Antonio de Prado","Muerto",25
+"Cabecera San Antonio de Prado","Solo danos",837
+"Cabecera Urbana San Cristobal","Herido",462
+"Cabecera Urbana San Cristobal","Muerto",6
+"Cabecera Urbana San Cristobal","Solo danos",170
+"Caicedo","Herido",622
+"Caicedo","Muerto",7
+"Caicedo","Solo danos",355
+"Calasanz","Herido",413
+"Calasanz","Muerto",3
+"Calasanz","Solo danos",467
+"Calasanz Parte Alta","Herido",263
+"Calasanz Parte Alta","Muerto",1
+"Calasanz Parte Alta","Solo danos",217
+"Calle Nueva","Herido",674
+"Calle Nueva","Muerto",5
+"Calle Nueva","Solo danos",1118
+"Campo Alegre","Herido",400
+"Campo Alegre","Muerto",3
+"Campo Alegre","Solo danos",197
+"Campo Amor","Herido",2136
+"Campo Amor","Muerto",25
+"Campo Amor","Solo danos",2430
+"Campo Valdes Nº 1","Herido",998
+"Campo Valdes Nº 1","Muerto",9
+"Campo Valdes Nº 1","Solo danos",340
+"Campo Valdes Nº 2","Herido",835
+"Campo Valdes Nº 2","Muerto",10
+"Campo Valdes Nº 2","Solo danos",172
+"Caribe","Herido",2436
+"Caribe","Muerto",27
+"Caribe","Solo danos",2339
+"Carlos E. Restrepo","Herido",1458
+"Carlos E. Restrepo","Muerto",12
+"Carlos E. Restrepo","Solo danos",1771
+"Carpinelo","Herido",92
+"Carpinelo","Muerto",1
+"Carpinelo","Solo danos",22
+"Castilla","Herido",4070
+"Castilla","Muerto",49
+"Castilla","Solo danos",2780
+"Castropol","Herido",501
+"Castropol","Muerto",2
+"Castropol","Solo danos",658
+"Cataluna","Herido",170
+"Cataluna","Muerto",1
+"Cataluna","Solo danos",133
+"Cerro Nutibara","Herido",489
+"Cerro Nutibara","Muerto",8
+"Cerro Nutibara","Solo danos",431
+"Corazon de Jesus","Herido",1071
+"Corazon de Jesus","Muerto",28
+"Corazon de Jesus","Solo danos",1602
+"Cordoba","Herido",380
+"Cordoba","Muerto",2
+"Cordoba","Solo danos",174
+"Corregimiento de San Antonio de Prado","Muerto",4
+"Corregimiento de Santa Elena","Muerto",1
+"Cristo Rey","Herido",1047
+"Cristo Rey","Muerto",18
+"Cristo Rey","Solo danos",1023
+"Cuarta Brigada","Herido",661
+"Cuarta Brigada","Muerto",7
+"Cuarta Brigada","Solo danos",611
+"Cucaracho","Herido",797
+"Cucaracho","Muerto",2
+"Cucaracho","Solo danos",291
+"Diego Echavarria","Herido",205
+"Diego Echavarria","Muerto",1
+"Diego Echavarria","Solo danos",232
+"Doce de Octubre Nº 1","Herido",455
+"Doce de Octubre Nº 1","Muerto",5
+"Doce de Octubre Nº 1","Solo danos",114
+"Doce de Octubre Nº 2","Herido",523
+"Doce de Octubre Nº 2","Muerto",5
+"Doce de Octubre Nº 2","Solo danos",139
+"Eduardo Santos","Herido",33
+"Eduardo Santos","Solo danos",13
+"El Castillo","Herido",98
+"El Castillo","Muerto",1
+"El Castillo","Solo danos",220
+"El Chagualo","Herido",1118
+"El Chagualo","Muerto",19
+"El Chagualo","Solo danos",1070
+"El Compromiso","Herido",83
+"El Compromiso","Solo danos",32
+"El Corazon","Herido",90
+"El Corazon","Muerto",2
+"El Corazon","Solo danos",29
+"El Corazon El Morro ","Herido",16
+"El Corazon El Morro ","Solo danos",1
+"El Danubio","Herido",263
+"El Danubio","Muerto",4
+"El Danubio","Solo danos",146
+"El Diamante","Herido",823
+"El Diamante","Muerto",1
+"El Diamante","Solo danos",267
+"El Diamante Nº 2","Herido",98
+"El Diamante Nº 2","Muerto",1
+"El Diamante Nº 2","Solo danos",189
+"El Llano SE","Solo danos",1
+"El Nogal - Los Almendros","Herido",216
+"El Nogal - Los Almendros","Muerto",5
+"El Nogal - Los Almendros","Solo danos",256
+"El Pesebre","Herido",139
+"El Pesebre","Solo danos",71
+"El Picacho","Herido",17
+"El Picacho","Solo danos",4
+"El Pinal","Herido",372
+"El Pinal","Muerto",4
+"El Pinal","Solo danos",204
+"El Plan","Herido",1
+"El Playon de Los Comuneros","Herido",230
+"El Playon de Los Comuneros","Muerto",4
+"El Playon de Los Comuneros","Solo danos",109
+"El Poblado","Herido",484
+"El Poblado","Muerto",3
+"El Poblado","Solo danos",1038
+"El Pomar","Herido",280
+"El Pomar","Muerto",1
+"El Pomar","Solo danos",82
+"El Progreso","Herido",1010
+"El Progreso","Muerto",2
+"El Progreso","Solo danos",938
+"El Progreso Nº 2","Herido",112
+"El Progreso Nº 2","Muerto",3
+"El Progreso Nº 2","Solo danos",42
+"El Raizal","Herido",384
+"El Raizal","Muerto",3
+"El Raizal","Solo danos",149
+"El Rincon","Herido",553
+"El Rincon","Muerto",1
+"El Rincon","Solo danos",367
+"El Rodeo","Herido",103
+"El Rodeo","Muerto",2
+"El Rodeo","Solo danos",68
+"El Salado","Herido",141
+"El Salado","Solo danos",49
+"El Salvador","Herido",383
+"El Salvador","Muerto",3
+"El Salvador","Solo danos",226
+"El Socorro","Herido",52
+"El Socorro","Muerto",2
+"El Socorro","Solo danos",16
+"El Tesoro","Herido",233
+"El Tesoro","Muerto",1
+"El Tesoro","Solo danos",444
+"El Triunfo","Herido",47
+"El Triunfo","Solo danos",10
+"El Uvito","Herido",1
+"El Velodromo","Herido",400
+"El Velodromo","Muerto",2
+"El Velodromo","Solo danos",343
+"El Vergel","Herido",2
+"El Vergel","Solo danos",2
+"El Volador","Herido",110
+"El Volador","Muerto",2
+"El Volador","Solo danos",75
+"Enciso","Herido",503
+"Enciso","Muerto",10
+"Enciso","Solo danos",196
+"Estacion Villa","Herido",672
+"Estacion Villa","Muerto",13
+"Estacion Villa","Solo danos",630
+"Estadio","Herido",933
+"Estadio","Muerto",3
+"Estadio","Solo danos",847
+"Fatima","Herido",631
+"Fatima","Muerto",3
+"Fatima","Solo danos",578
+"Ferrini","Herido",153
+"Ferrini","Muerto",1
+"Ferrini","Solo danos",136
+"Florencia","Herido",269
+"Florencia","Muerto",1
+"Florencia","Solo danos",117
+"Florida Nueva","Herido",444
+"Florida Nueva","Muerto",7
+"Florida Nueva","Solo danos",430
+"Francisco Antonio Zea","Herido",435
+"Francisco Antonio Zea","Solo danos",204
+"Fuente Clara","Herido",99
+"Fuente Clara","Muerto",2
+"Fuente Clara","Solo danos",18
+"Gerona","Herido",334
+"Gerona","Solo danos",146
+"Girardot","Herido",738
+"Girardot","Muerto",7
+"Girardot","Solo danos",361
+"Granada","Herido",243
+"Granada","Muerto",2
+"Granada","Solo danos",261
+"Granizal","Herido",219
+"Granizal","Muerto",7
+"Granizal","Solo danos",143
+"Guayabal","Herido",1586
+"Guayabal","Muerto",18
+"Guayabal","Solo danos",1601
+"Guayaquil","Herido",1498
+"Guayaquil","Muerto",34
+"Guayaquil","Solo danos",2245
+"Hector Abad Gomez","Herido",597
+"Hector Abad Gomez","Muerto",12
+"Hector Abad Gomez","Solo danos",408
+"Inst","Herido",89
+"Inst","Muerto",5
+"Inst","Solo danos",89
+"Jesus Nazareno","Herido",1175
+"Jesus Nazareno","Muerto",28
+"Jesus Nazareno","Solo danos",950
+"Juan Pablo II","Herido",31
+"Juan Pablo II","Solo danos",9
+"Juan XXIII","Herido",119
+"Juan XXIII","Muerto",2
+"Juan XXIII","Solo danos",51
+"Kennedy","Herido",725
+"Kennedy","Muerto",2
+"Kennedy","Solo danos",278
+"La Aguacatala","Herido",808
+"La Aguacatala","Muerto",10
+"La Aguacatala","Solo danos",1192
+"La America","Herido",627
+"La America","Muerto",11
+"La America","Solo danos",567
+"La Avanzada","Herido",94
+"La Avanzada","Solo danos",34
+"La Candelaria","Herido",3148
+"La Candelaria","Muerto",37
+"La Candelaria","Solo danos",4429
+"La Castellana","Herido",385
+"La Castellana","Muerto",2
+"La Castellana","Solo danos",419
+"La Colina","Herido",315
+"La Colina","Muerto",5
+"La Colina","Solo danos",235
+"La Cruz","Herido",82
+"La Cruz","Muerto",1
+"La Cruz","Solo danos",28
+"La Esperanza","Herido",604
+"La Esperanza","Muerto",6
+"La Esperanza","Solo danos",145
+"La Esperanza Nº 2","Herido",103
+"La Esperanza Nº 2","Solo danos",26
+"La Floresta","Herido",447
+"La Floresta","Muerto",4
+"La Floresta","Solo danos",341
+"La Florida","Herido",295
+"La Florida","Muerto",1
+"La Florida","Solo danos",629
+"La Francia","Herido",190
+"La Francia","Solo danos",92
+"La Frontera","Herido",165
+"La Frontera","Solo danos",83
+"La Gloria","Herido",580
+"La Gloria","Muerto",1
+"La Gloria","Solo danos",444
+"La Hondonada","Herido",104
+"La Hondonada","Solo danos",85
+"La Isla","Herido",148
+"La Isla","Muerto",2
+"La Isla","Solo danos",58
+"La Ladera","Herido",53
+"La Ladera","Solo danos",30
+"La Libertad","Herido",229
+"La Libertad","Muerto",1
+"La Libertad","Solo danos",117
+"La Loma de Los Bernal","Herido",207
+"La Loma de Los Bernal","Muerto",2
+"La Loma de Los Bernal","Solo danos",245
+"La Loma Oriental","Herido",22
+"La Loma Oriental","Solo danos",6
+"La Mansion","Herido",211
+"La Mansion","Solo danos",106
+"La Milagrosa","Herido",336
+"La Milagrosa","Muerto",7
+"La Milagrosa","Solo danos",206
+"La Mota","Herido",237
+"La Mota","Muerto",3
+"La Mota","Solo danos",181
+"La Oculta","Herido",12
+"La Oculta","Muerto",1
+"La Oculta","Solo danos",7
+"La Palma","Herido",375
+"La Palma","Muerto",2
+"La Palma","Solo danos",297
+"La Pilarica","Herido",291
+"La Pilarica","Muerto",1
+"La Pilarica","Solo danos",230
+"La Pinuela","Herido",266
+"La Pinuela","Muerto",3
+"La Pinuela","Solo danos",94
+"La Pradera","Herido",300
+"La Pradera","Muerto",2
+"La Pradera","Solo danos",111
+"La Rosa","Herido",196
+"La Rosa","Muerto",3
+"La Rosa","Solo danos",59
+"La Salle","Herido",455
+"La Salle","Muerto",3
+"La Salle","Solo danos",145
+"La Sierra","Herido",15
+"La Sierra","Solo danos",2
+"La Verde ","Herido",22
+"La Verde ","Solo danos",25
+"Lalinde","Herido",60
+"Lalinde","Solo danos",103
+"Las Acacias","Herido",701
+"Las Acacias","Muerto",6
+"Las Acacias","Solo danos",935
+"Las Brisas","Herido",657
+"Las Brisas","Muerto",10
+"Las Brisas","Solo danos",421
+"Las Esmeraldas","Herido",255
+"Las Esmeraldas","Muerto",7
+"Las Esmeraldas","Solo danos",143
+"Las Estancias","Herido",222
+"Las Estancias","Muerto",1
+"Las Estancias","Solo danos",60
+"Las Granjas","Herido",892
+"Las Granjas","Muerto",15
+"Las Granjas","Solo danos",300
+"Las Independencias","Herido",65
+"Las Independencias","Solo danos",12
+"Las Lomas Nº 1","Herido",220
+"Las Lomas Nº 1","Solo danos",379
+"Las Lomas Nº 2","Herido",139
+"Las Lomas Nº 2","Solo danos",192
+"Las Mercedes","Herido",216
+"Las Mercedes","Solo danos",155
+"Las Palmas","Herido",354
+"Las Palmas","Muerto",4
+"Las Palmas","Solo danos",284
+"Las Playas","Herido",335
+"Las Playas","Muerto",2
+"Las Playas","Solo danos",253
+"Las Violetas","Herido",258
+"Las Violetas","Muerto",4
+"Las Violetas","Solo danos",141
+"Laureles","Herido",783
+"Laureles","Muerto",12
+"Laureles","Solo danos",967
+"Llanaditas","Herido",55
+"Llanaditas","Solo danos",15
+"Lopez de Mesa","Herido",743
+"Lopez de Mesa","Muerto",3
+"Lopez de Mesa","Solo danos",252
+"Lorena","Herido",495
+"Lorena","Muerto",8
+"Lorena","Solo danos",497
+"Loreto","Herido",491
+"Loreto","Muerto",4
+"Loreto","Solo danos",239
+"Los Alcazares","Herido",308
+"Los Alcazares","Muerto",5
+"Los Alcazares","Solo danos",179
+"Los Alpes","Herido",288
+"Los Alpes","Muerto",1
+"Los Alpes","Solo danos",185
+"Los angeles","Herido",722
+"Los angeles","Muerto",2
+"Los angeles","Solo danos",540
+"Los Balsos Nº 1","Herido",123
+"Los Balsos Nº 1","Muerto",3
+"Los Balsos Nº 1","Solo danos",262
+"Los Balsos Nº 2","Herido",181
+"Los Balsos Nº 2","Solo danos",611
+"Los Cerros - El Vergel","Herido",161
+"Los Cerros - El Vergel","Muerto",3
+"Los Cerros - El Vergel","Solo danos",80
+"Los Colores","Herido",1369
+"Los Colores","Muerto",11
+"Los Colores","Solo danos",810
+"Los Conquistadores","Herido",1776
+"Los Conquistadores","Muerto",22
+"Los Conquistadores","Solo danos",2267
+"Los Mangos","Herido",387
+"Los Mangos","Muerto",3
+"Los Mangos","Solo danos",166
+"Los Naranjos","Herido",169
+"Los Naranjos","Muerto",1
+"Los Naranjos","Solo danos",349
+"Los Pinos","Herido",625
+"Los Pinos","Muerto",6
+"Los Pinos","Solo danos",602
+"Manila","Herido",663
+"Manila","Muerto",4
+"Manila","Solo danos",1297
+"Manrique","Herido",670
+"Manrique","Muerto",8
+"Manrique","Solo danos",266
+"Manrique Central Nº 1","Herido",819
+"Manrique Central Nº 1","Muerto",11
+"Manrique Central Nº 1","Solo danos",427
+"Manrique Central Nº 2","Herido",522
+"Manrique Central Nº 2","Muerto",3
+"Manrique Central Nº 2","Solo danos",205
+"Maria Cano - Carambola","Herido",52
+"Maria Cano - Carambola","Muerto",1
+"Maria Cano - Carambola","Solo danos",15
+"Media Luna","Herido",2
+"Media Luna","Solo danos",1
+"Metropolitano","Herido",31
+"Metropolitano","Solo danos",11
+"Mirador del Doce","Herido",38
+"Mirador del Doce","Muerto",1
+"Mirador del Doce","Solo danos",5
+"Miraflores","Herido",426
+"Miraflores","Muerto",2
+"Miraflores","Solo danos",248
+"Miranda","Herido",687
+"Miranda","Muerto",5
+"Miranda","Solo danos",449
+"Miravalle","Herido",47
+"Miravalle","Solo danos",46
+"Monteclaro","Herido",83
+"Monteclaro","Solo danos",27
+"Moravia","Herido",897
+"Moravia","Muerto",20
+"Moravia","Solo danos",532
+"Moscu Nº 1","Herido",247
+"Moscu Nº 1","Solo danos",133
+"Moscu Nº 2","Herido",270
+"Moscu Nº 2","Muerto",2
+"Moscu Nº 2","Solo danos",81
+"Naranjal","Herido",1268
+"Naranjal","Muerto",15
+"Naranjal","Solo danos",1652
+"Nueva Villa de Aburra","Herido",91
+"Nueva Villa de Aburra","Muerto",1
+"Nueva Villa de Aburra","Solo danos",93
+"Nuevos Conquistadores","Herido",79
+"Nuevos Conquistadores","Muerto",1
+"Nuevos Conquistadores","Solo danos",26
+"Ocho de Marzo","Herido",35
+"Ocho de Marzo","Muerto",2
+"Ocho de Marzo","Solo danos",16
+"Olaya Herrera","Herido",155
+"Olaya Herrera","Muerto",3
+"Olaya Herrera","Solo danos",54
+"Oriente","Herido",79
+"Oriente","Muerto",4
+"Oriente","Solo danos",14
+"Pablo VI","Herido",70
+"Pablo VI","Muerto",2
+"Pablo VI","Solo danos",30
+"Pajarito","Herido",93
+"Pajarito","Solo danos",35
+"Palenque","Herido",260
+"Palenque","Muerto",1
+"Palenque","Solo danos",159
+"Palermo","Herido",266
+"Palermo","Muerto",3
+"Palermo","Solo danos",142
+"Palmitas Sector Central","Herido",2
+"Patio Bonito","Herido",402
+"Patio Bonito","Muerto",4
+"Patio Bonito","Solo danos",661
+"Pedregal","Herido",779
+"Pedregal","Muerto",8
+"Pedregal","Solo danos",198
+"Pedregal Alto","Herido",41
+"Pedregal Alto","Solo danos",9
+"Pedregal Bajo","Herido",84
+"Pedregal Bajo","Solo danos",18
+"Perpetuo Socorro","Herido",2091
+"Perpetuo Socorro","Muerto",19
+"Perpetuo Socorro","Solo danos",2412
+"Picachito","Herido",76
+"Picachito","Solo danos",11
+"Picacho","Herido",657
+"Picacho","Muerto",2
+"Picacho","Solo danos",184
+"Piedra Gorda","Solo danos",1
+"Piedras Blancas","Herido",84
+"Piedras Blancas","Muerto",1
+"Piedras Blancas","Solo danos",22
+"Piedras Blancas - Matasano","Herido",1
+"Piedras Blancas Represa","Herido",4
+"Piedras Blancas Represa","Solo danos",1
+"Popular","Herido",356
+"Popular","Muerto",1
+"Popular","Solo danos",146
+"Potrerito","Herido",4
+"Potrerito","Solo danos",1
+"Prado","Herido",1249
+"Prado","Muerto",14
+"Prado","Solo danos",947
+"Robledo","Herido",2673
+"Robledo","Muerto",21
+"Robledo","Solo danos",1926
+"Rosales","Herido",850
+"Rosales","Muerto",8
+"Rosales","Solo danos",759
+"San Antonio","Herido",20
+"San Antonio","Solo danos",6
+"San Benito","Herido",1586
+"San Benito","Muerto",30
+"San Benito","Solo danos",2087
+"San Bernardo","Herido",632
+"San Bernardo","Muerto",10
+"San Bernardo","Solo danos",447
+"San Diego","Herido",1220
+"San Diego","Muerto",12
+"San Diego","Solo danos",1869
+"San German","Herido",382
+"San German","Muerto",5
+"San German","Solo danos",332
+"San Isidro","Herido",810
+"San Isidro","Muerto",5
+"San Isidro","Solo danos",310
+"San Javier Nº 1","Herido",537
+"San Javier Nº 1","Muerto",4
+"San Javier Nº 1","Solo danos",234
+"San Javier Nº 2","Herido",198
+"San Javier Nº 2","Muerto",1
+"San Javier Nº 2","Solo danos",115
+"San Joaquin","Herido",342
+"San Joaquin","Muerto",7
+"San Joaquin","Solo danos",368
+"San Jose de la Montana","Herido",2
+"San Jose de la Montana","Solo danos",1
+"San Jose La Cima Nº 1","Herido",30
+"San Jose La Cima Nº 1","Muerto",1
+"San Jose La Cima Nº 1","Solo danos",7
+"San Jose La Cima Nº 2","Herido",20
+"San Jose La Cima Nº 2","Solo danos",1
+"San Lucas","Herido",50
+"San Lucas","Muerto",1
+"San Lucas","Solo danos",157
+"San Martin de Porres","Herido",495
+"San Martin de Porres","Muerto",1
+"San Martin de Porres","Solo danos",174
+"San Miguel","Herido",614
+"San Miguel","Muerto",4
+"San Miguel","Solo danos",266
+"San Pablo","Herido",307
+"San Pablo","Solo danos",83
+"San Pedro","Herido",537
+"San Pedro","Muerto",7
+"San Pedro","Solo danos",471
+"Santa Cruz","Herido",255
+"Santa Cruz","Muerto",4
+"Santa Cruz","Solo danos",81
+"Santa Fe","Herido",1974
+"Santa Fe","Muerto",23
+"Santa Fe","Solo danos",1703
+"Santa Ines","Herido",424
+"Santa Ines","Muerto",4
+"Santa Ines","Solo danos",169
+"Santa Lucia","Herido",171
+"Santa Lucia","Muerto",1
+"Santa Lucia","Solo danos",98
+"Santa Margarita","Herido",191
+"Santa Margarita","Muerto",1
+"Santa Margarita","Solo danos",62
+"Santa Maria de los angeles","Herido",404
+"Santa Maria de los angeles","Muerto",7
+"Santa Maria de los angeles","Solo danos",640
+"Santa Maria de Los angeles","Muerto",1
+"Santa Monica","Herido",275
+"Santa Monica","Muerto",2
+"Santa Monica","Solo danos",148
+"Santa Rosa de Lima","Herido",20
+"Santa Rosa de Lima","Muerto",1
+"Santa Rosa de Lima","Solo danos",6
+"Santa Teresita","Herido",161
+"Santa Teresita","Solo danos",145
+"Santander","Herido",464
+"Santander","Muerto",8
+"Santander","Solo danos",106
+"Santo Domingo Savio Nº 1","Herido",432
+"Santo Domingo Savio Nº 1","Muerto",5
+"Santo Domingo Savio Nº 1","Solo danos",118
+"Santo Domingo Savio Nº 2","Herido",141
+"Santo Domingo Savio Nº 2","Muerto",2
+"Santo Domingo Savio Nº 2","Solo danos",38
+"Sevilla","Herido",729
+"Sevilla","Muerto",10
+"Sevilla","Solo danos",633
+"Simon Bolivar","Herido",247
+"Simon Bolivar","Muerto",2
+"Simon Bolivar","Solo danos",213
+"Sin Nombre","Herido",4
+"Sin Nombre","Solo danos",1
+"SUBURB El Plan","Herido",5
+"SUBURB El Plan","Solo danos",2
+"Suburbano Altavista","Herido",68
+"Suburbano Altavista","Muerto",1
+"Suburbano Altavista","Solo danos",25
+"Suburbano Chacaltaya","Herido",2
+"Suburbano Chacaltaya","Solo danos",5
+"Suburbano El Llano","Herido",12
+"Suburbano El Llano","Solo danos",18
+"Suburbano El Plan","Herido",262
+"Suburbano El Plan","Solo danos",48
+"Suburbano el Tesoro","Herido",12
+"Suburbano el Tesoro","Solo danos",11
+"Suburbano La Loma","Herido",163
+"Suburbano La Loma","Muerto",2
+"Suburbano La Loma","Solo danos",87
+"Suburbano Mirador del Poblado","Herido",35
+"Suburbano Mirador del Poblado","Solo danos",31
+"Suburbano Palma Patio","Herido",18
+"Suburbano Palma Patio","Muerto",1
+"Suburbano Palma Patio","Solo danos",10
+"Suburbano Palmitas","Herido",3
+"Suburbano Palmitas","Muerto",1
+"Suburbano Palmitas","Solo danos",6
+"Suburbano Pedregal alto","Herido",24
+"Suburbano Pedregal alto","Solo danos",1
+"Suburbano Potrerito","Herido",1
+"Suburbano Travesias","Herido",67
+"Suburbano Travesias","Solo danos",21
+"Sucre","Herido",505
+"Sucre","Muerto",6
+"Sucre","Solo danos",242
+"Suramericana","Herido",769
+"Suramericana","Muerto",9
+"Suramericana","Solo danos",1029
+"Tejelo","Herido",585
+"Tejelo","Muerto",5
+"Tejelo","Solo danos",190
+"Tenche","Herido",535
+"Tenche","Muerto",7
+"Tenche","Solo danos",568
+"Toscana","Herido",539
+"Toscana","Muerto",13
+"Toscana","Solo danos",390
+"Travesias","Solo danos",1
+"Trece de Noviembre","Herido",25
+"Trece de Noviembre","Solo danos",35
+"Tricentenario","Herido",591
+"Tricentenario","Muerto",7
+"Tricentenario","Solo danos",460
+"Trinidad","Herido",675
+"Trinidad","Muerto",7
+"Trinidad","Solo danos",486
+"Veinte de Julio","Herido",287
+"Veinte de Julio","Muerto",8
+"Veinte de Julio","Solo danos",85
+"Versalles Nº 1","Herido",378
+"Versalles Nº 1","Muerto",3
+"Versalles Nº 1","Solo danos",173
+"Versalles Nº 2","Herido",39
+"Versalles Nº 2","Solo danos",26
+"Villa Carlota","Herido",966
+"Villa Carlota","Muerto",12
+"Villa Carlota","Solo danos",1465
+"Villa de La Iguana","Herido",288
+"Villa de La Iguana","Muerto",2
+"Villa de La Iguana","Solo danos",173
+"Villa del Socorro","Herido",307
+"Villa del Socorro","Muerto",3
+"Villa del Socorro","Solo danos",160
+"Villa Flora","Herido",566
+"Villa Flora","Solo danos",336
+"Villa Guadalupe","Herido",305
+"Villa Guadalupe","Muerto",4
+"Villa Guadalupe","Solo danos",99
+"Villa Hermosa","Herido",446
+"Villa Hermosa","Muerto",3
+"Villa Hermosa","Solo danos",158
+"Villa Lilliam","Herido",105
+"Villa Lilliam","Solo danos",26
+"Villa Niza","Herido",120
+"Villa Niza","Muerto",2
+"Villa Niza","Solo danos",61
+"Villa Nueva","Herido",1544
+"Villa Nueva","Muerto",21
+"Villa Nueva","Solo danos",1668
+"Villa Turbay","Herido",36
+"Villa Turbay","Solo danos",11
+"Villatina","Herido",365
+"Villatina","Muerto",2
+"Villatina","Solo danos",142
+"Volcana Guayabal","Herido",1
+"Yolombo","Herido",14
+"Yolombo","Solo danos",9
+"Zona rural","Herido",189
+"Zona rural","Muerto",14
+"Zona rural","Solo danos",71

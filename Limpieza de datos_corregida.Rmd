@@ -1,0 +1,435 @@
+---
+title: "Trabajo_final"
+author: "Equipo ciencia de los datos"
+date: "13/10/2019"
+output: html_document
+---
+
+##LIMPIEZA DE DATOS BASE DE DATOS DE ACCIDENTALIDAD
+
+```{r}
+library(tidyverse)
+library(shinydashboard)
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(leaflet)
+library(leaflet.extras)
+library(htmltools)
+library(flexdashboard)
+library(RColorBrewer)
+library(crosstalk)
+library(kableExtra)
+library(RColorBrewer)
+library(htmltools)
+```
+
+Se leen las bases de datos:
+
+```{r}
+accidentalidad <- read.csv("ACCIDENTALIDAD_GEO_V4.csv", header = TRUE,sep=";",dec=",")
+
+```
+
+Se cambia el formato de la variable "FECHA" para "accidentalidad" y de "fecha_completa" para "festivos":
+
+```{r}
+accidentalidad$FECHA_CORREGIDA <- substr (accidentalidad$FECHA,1,10)
+accidentalidad$FECHA_CORREGIDA <- as.Date (accidentalidad$FECHA_CORREGIDA,format = "%Y-%m-%d")
+
+```
+
+Se crea un vector con el dia de la semana para catalogar los sabados y domingos como dias no habiles. La primera linea de codigo se usa para cambiar el idioma de los resultados a ingles
+
+```{r}
+
+
+primer_fecha<-min(accidentalidad$FECHA_CORREGIDA)
+ultima_fecha<-max(accidentalidad$FECHA_CORREGIDA)
+N_FECHAS<-seq(primer_fecha,ultima_fecha,by=1)
+N_DIA_SEMANA<-weekdays(N_FECHAS)
+N_DIA_LABORAL<-ifelse(N_DIA_SEMANA %in% c("sabado","domingo"), "Fin de semana", "Laboral")
+
+```
+
+Se crea un dataframe con los vectores de las fechas y los dias laborales
+
+```{r}
+N_MAESTRO_FECHAS<-data.frame(N_FECHAS,N_DIA_SEMANA,N_DIA_LABORAL)
+
+
+```
+
+Se carga una base de datos con los dias festivos en Colombia, se cambia a formato "Date", se completa el codigo para catalogar los dias en festivos y se actualiza el maestro de fechas
+
+```{r}
+dias_festivos_colombia<-read.csv("festivoscolombia.csv", header=TRUE, sep=";")
+dias_festivos_colombia$fecha_completa<-as.Date(dias_festivos_colombia$fecha_completa)
+N_DIA_LABORAL<-ifelse(N_DIA_SEMANA %in% c("sabado","domingo"), "Fin de semana", ifelse(N_FECHAS %in% dias_festivos_colombia$fecha_completa,"Festivo","Laboral"))
+N_MAESTRO_FECHAS<-data.frame(N_FECHAS,N_DIA_SEMANA,N_DIA_LABORAL)
+```
+
+Se crea un nuevo dataframe uniendo los dataframes de accidentalidad y maestro de fechas
+
+```{r}
+
+accidentalidad_enriquecida<-data.frame(merge(accidentalidad,N_MAESTRO_FECHAS,by.x = "FECHA_CORREGIDA", by.y = "N_FECHAS"))
+
+```
+
+Se lee la base de datos de eventos importantes y se hace un merge con la base de datos principal:
+
+```{r}
+fechas_eventos<- read.csv("fechas_eventos_medellin.csv", header = TRUE, sep = ";")
+fechas_eventos$MES.DIA <- as.Date (fechas_eventos$MES.DIA,format = "%d/%m/%Y")
+fechas_eventos$MES.DIA <- as.Date (fechas_eventos$MES.DIA,format = "%Y-%m-%d")
+accidentalidad_enriquecida <- data.frame(merge(accidentalidad_enriquecida,fechas_eventos,by.x = "FECHA_CORREGIDA", by.y = "MES.DIA", all.x = TRUE))
+
+```
+
+
+
+# Crear variables MES_NOMBRE
+
+Se crea un campo nuevo que indica el nombre del mes:
+
+```{r}
+accidentalidad_enriquecida$MES_NOMBRE <- as.POSIXct(accidentalidad_enriquecida$FECHA_CORREGIDA)
+
+accidentalidad_enriquecida$MES_NOMBRE <- format(accidentalidad_enriquecida$FECHA_CORR, "%B") 
+
+class(accidentalidad_enriquecida$FECHA_CORREGIDA)
+```
+
+Se ordenan los niveles del factor para mes y dia para su uso en graficos:
+
+```{r}
+accidentalidad_enriquecida$MES_NOMBRE <- as.factor(accidentalidad_enriquecida$MES_NOMBRE)
+
+accidentalidad_enriquecida$MES_NOMBRE <- ordered(accidentalidad_enriquecida$MES_NOMBRE, 
+                                      levels = c("enero", "febrero", "marzo", 
+                                                 "abril", "mayo", "junio", "julio",
+                                                 "agosto", "septiembre", "octubre",
+                                                 "noviembre", "diciembre"))
+
+accidentalidad_enriquecida$N_DIA_SEMANA <- as.factor(accidentalidad_enriquecida$N_DIA_SEMANA)
+accidentalidad_enriquecida$N_DIA_SEMANA <- ordered(accidentalidad_enriquecida$N_DIA_SEMANA, 
+                            levels = c("lunes","martes","miercoles","jueves","viernes",
+                                       "sabado","domingo"))
+
+
+
+```
+
+Se limpia la informacion de la hora pico para que sea solo en semana.
+
+```{r}
+accidentalidad_enriquecida$TIPO_HORA2<-ifelse(accidentalidad_enriquecida$N_DIA_LABORAL %in% c("Festivo","Fin de semana"),"HORA VALLE",accidentalidad_enriquecida$TIPO_HORA)
+```
+
+Se crea un vector con las columnas que no seran utilizadas en el analisis y se crea una nueva base de datos sin estas.
+
+```{r}
+variables_rm <- c("X", "Y", "RADICADO", "DIRECCION_ENC", "CBML", "MES_NOMBRE", "COMUNA",
+                  "JORNADA2","JORNADA","TIPO_HORA")
+
+data2<-accidentalidad_enriquecida
+
+data2 <- accidentalidad_enriquecida[, !(colnames(data2) %in% variables_rm), drop = FALSE]
+
+
+```
+se renombra la columna TIPO_HORA2
+
+```{r}
+colnames(data2)[colnames(data2)=="TIPO_HORA2"] <- "TIPO_HORA"
+```
+
+Se crea un rds con la base de datos "data2" y se le da el nombre de "accidentalidad_enriquecida2.csv":
+
+```{r}
+#write.csv(data2, "accidentalidad_enriquecida2.csv", row.names = FALSE)
+saveRDS(data2, file = "accidentalidad_enriquecida2.rds", ascii = FALSE, version = NULL, compress = TRUE, refhook = NULL)
+
+```
+
+Se guarda la base de datos:
+
+```{r}
+#data2<-read.csv("accidentalidad_enriquecida2.csv",sep=",", dec=".", 
+#                stringsAsFactors = FALSE)
+
+data2<-readRDS(file="accidentalidad_enriquecida2.rds", refhook = NULL)
+
+```
+
+Se crea una tabla para el conteo de la grupacion por periodo, mes, barrio y gravedad:
+
+```{r}
+completa_gravedad <- data2 %>%
+    select(PERIODO, MES,BARRIO,GRAVEDAD)%>%
+    group_by(PERIODO, MES,BARRIO,GRAVEDAD)%>%
+    summarise(CONTEO=length(PERIODO))
+write.csv(completa_gravedad, "completa_gravedad.csv", row.names = FALSE)
+```
+
+Se crea una tabla para el conteo de la grupacion por periodo, mes y barrio:
+
+```{r}
+completa_barrio <- completa_gravedad %>%
+    select(PERIODO, MES,BARRIO, CONTEO)%>%
+    group_by(PERIODO, MES,BARRIO)%>%
+    summarise(TOTAL=sum(CONTEO))
+write.csv(completa_barrio, "completa_barrio.csv", row.names = FALSE)
+```
+
+Conteo de la Agrupacion Periodo, mes, barrio y gravedad y el total por periodo y por barrio: 
+```{r}
+completa <- left_join(completa_gravedad,completa_barrio, 
+                      by = c("PERIODO", "BARRIO", "MES"))
+completa$PORCENTAJE <- completa$CONTEO/completa$TOTAL
+write.csv(completa, "completa.csv", row.names = FALSE)
+```
+
+Cantidad de accidentes por barrio en todos los tiempos:
+```{r}
+
+general<- completa[, c("BARRIO", "CONTEO")] %>%
+    select(BARRIO, CONTEO) %>%
+    group_by(BARRIO) %>%
+    summarise(TOTAL =sum(CONTEO))
+write.csv(general, "general.csv", row.names = FALSE)
+```
+
+
+Cantidad de accidentes por gravedad en cada barrio en todos los tiempos:
+```{r}
+
+general_gravedad<-data2[,c("BARRIO", "GRAVEDAD")]%>%
+    select(BARRIO,GRAVEDAD)%>%
+    group_by(BARRIO, GRAVEDAD)%>%
+    summarise(CONTEO=length(BARRIO)) 
+write.csv(general_gravedad, "general_gravedad.csv", row.names = FALSE)
+
+```
+
+TOP 10 Barrios con mas accidentalidad en todos los tiempos:
+```{r}
+
+ordenamiento<-general[order(-general$TOTAL),]
+ordenamiento<-head(ordenamiento,10)
+ordenamiento$BARRIO<-as.character(ordenamiento$BARRIO)
+write.csv(ordenamiento, "ordenamiento.csv", row.names = FALSE)
+```
+
+Porcentaje por gravedad accidente general
+
+```{r}
+completa_porc_anno<- completa[, c("PERIODO","BARRIO","GRAVEDAD", "CONTEO")] %>%
+    select(BARRIO,GRAVEDAD,CONTEO) %>%
+    group_by(BARRIO,GRAVEDAD) %>%
+    summarise(TOTAL= sum(CONTEO))
+
+col_porcentaje_general<- completa[, c("BARRIO", "CONTEO")] %>%
+    select(BARRIO,CONTEO) %>%
+    group_by(BARRIO) %>%
+    summarise(TOTAL= sum(CONTEO))
+
+completa_general <- left_join(completa_porc_anno,col_porcentaje_general, 
+                              by = c("BARRIO"))
+
+completa_general$PORCENTAJE <- completa_general$TOTAL.x/completa_general$TOTAL.y
+
+completa_general_10 <- inner_join(completa_general,ordenamiento, 
+                                  by = c("BARRIO"))
+
+completa_general_10<- completa_general_10[, c("BARRIO","GRAVEDAD", "TOTAL.x",
+                                              "TOTAL.y","PORCENTAJE")]
+completa_general_10<-completa_general_10[order(-completa_general_10$TOTAL.y),]
+
+write.csv(completa_general_10, "completa_general_10.csv", row.names = FALSE)
+```
+
+Top 10 barrios con mayor accidentalidad por gravedad
+
+```{r}
+general_g<-inner_join(general_gravedad,ordenamiento,by="BARRIO")
+general_g<-general_g[order(-general_g$TOTAL),]
+write.csv(general_g, "general_g.csv", row.names = FALSE)
+```
+cantidad de accidentes por periodo de tiempo en cada barrio
+
+```{r}
+general_per_barr<- completa[, c("BARRIO", "PERIODO", "CONTEO")] %>%
+    select(BARRIO, PERIODO, CONTEO) %>%
+    group_by(BARRIO, PERIODO) %>%
+    summarise(TOTAL =sum(CONTEO))
+write.csv(general_per_barr, "general_per_barr.csv", row.names = FALSE)
+```
+
+COORDENADAS POR BARRIO POR GRAVEDAD PARA CADA A?O
+```{r}
+general_coord<- data2[,c("BARRIO","GRAVEDAD","LATITUD","LONGITUD","PERIODO",
+                         "FECHA_CORREGIDA","CLASE","DIRECCION")]
+
+#write.csv(general_coord, "general_coord.csv", row.names = FALSE)
+saveRDS(general_coord, file = "general_coord.rds", ascii = FALSE, version = NULL, compress = TRUE, refhook = NULL)
+```
+
+```{r}
+completa_gravedad1 <- data2 %>%
+    select(FECHA_CORREGIDA,BARRIO,GRAVEDAD)%>%
+    group_by(FECHA_CORREGIDA,BARRIO,GRAVEDAD)%>%
+    summarise(CONTEO=length(FECHA_CORREGIDA))
+
+completa_barrio1 <- completa_gravedad1 %>%
+    select(FECHA_CORREGIDA,BARRIO, CONTEO)%>%
+    group_by(FECHA_CORREGIDA,BARRIO)%>%
+    summarise(TOTAL=sum(CONTEO))
+
+completa_barrio1$FECHA_CORREGIDA <- as.Date(( completa_barrio1$FECHA_CORREGIDA),"%Y-%m-%d")
+completa_barrio1$FECHA_CORREGIDA <- format(as.Date(completa_barrio1$FECHA_CORREGIDA),"%Y-%m")
+
+data_agrupada <- 
+    group_by(completa_barrio1,FECHA_CORREGIDA) %>% 
+    summarise(SUMA=sum(TOTAL))
+write.csv(data_agrupada, "data_agrupada.csv", row.names = FALSE)
+
+data_clasacc <- data2 %>%
+    select(CLASE) %>% 
+    group_by(CLASE)%>%
+    summarise(TOTAL=length(CLASE))
+
+a <- sum(data_clasacc$TOTAL)
+
+result <- cbind(data_clasacc, a)
+
+result$PORCENTAJE <- result$TOTAL/result$a * 100
+result <- arrange(result, desc(result$PORCENTAJE))
+
+result$CLASE <- factor(result$CLASE, levels = c("","INCENDIO", "VOLCAMIENTO","CAIDA DE OCUPANTE", "ATROPELLO", "OTRO","CHOQUE"))
+result$PORCENTAJE<-round(result$PORCENTAJE,1)
+
+write.csv(result, "result.csv", row.names = FALSE)
+
+```
+
+ConstrucciÃ³n de tabla de clase accidente por aÃ±o
+
+```{r}
+result_PERIODO<- data2 %>%
+    select(PERIODO, CLASE) %>% 
+    group_by(PERIODO, CLASE)%>%
+    summarise(CANTIDAD_ACCIDENTE=length(PERIODO))
+
+result_CLASE<- data2 %>%
+    select(PERIODO) %>% 
+    group_by(PERIODO)%>%
+    summarise(TOTAL=length(PERIODO))
+```
+
+Unificar tabla de result_PERIODO, result_CLASE
+
+```{r}
+data_Tot_classacc <-left_join(result_PERIODO,result_CLASE, by ="PERIODO")
+
+```
+Se saca el porcentaje 
+```{r}
+data_Tot_classacc$PORCENTAJE <- data_Tot_classacc$CANTIDAD_ACCIDENTE/data_Tot_classacc$TOTAL * 100
+result2 <- arrange(data_Tot_classacc, desc(data_Tot_classacc$PORCENTAJE))
+write.csv(result2, "result2.csv", row.names = FALSE)
+```
+COMUNA MAYOR ACCIDENTALIDAD
+```{r}
+comuna_mayor_acc<- data2 %>% 
+    select(COMUNA_V2) %>%
+    group_by(COMUNA_V2) %>%
+    summarise(TOTAL=length(COMUNA_V2))
+
+comuna_mayor_acc <- arrange(comuna_mayor_acc, desc(comuna_mayor_acc$TOTAL))
+comuna_mayor_acc<-head(comuna_mayor_acc,1)
+write.csv(comuna_mayor_acc, "comuna_mayor_acc.csv", row.names = FALSE)
+```
+BARRIO MAYOR ACCIDENTALIDAD
+```{r}
+barrio_mayor_acc<- data2 %>% 
+    select(BARRIO) %>%
+    group_by(BARRIO) %>%
+    summarise(TOTAL=length(BARRIO))
+
+barrio_mayor_acc <- arrange(barrio_mayor_acc, desc(barrio_mayor_acc$TOTAL))
+barrio_mayor_acc<-head(barrio_mayor_acc,1)
+write.csv(barrio_mayor_acc, "barrio_mayor_acc.csv", row.names = FALSE)
+```
+promedio de accidentes por dia
+```{r}
+
+N_MAESTRO_FECHAS<-read.csv("N_MAESTRO_FECHAS.csv",sep=",")
+
+N_MAESTRO_FECHAS$PERIODO <- as.character(N_MAESTRO_FECHAS$N_FECHAS)
+N_MAESTRO_FECHAS$PERIODO <-substr(N_MAESTRO_FECHAS$PERIODO,1,4)
+N_MAESTRO_FECHAS$PERIODO <-as.numeric(N_MAESTRO_FECHAS$PERIODO)
+
+completa_conteo_accidentes <- data2 %>%
+    select(PERIODO,N_DIA_LABORAL)%>%
+    group_by(PERIODO,N_DIA_LABORAL)%>%
+    summarise(CONTEO=length(PERIODO))
+
+completa_conteo_tipo_dia <- N_MAESTRO_FECHAS %>%
+    select(PERIODO,N_DIA_LABORAL)%>%
+    group_by(PERIODO,N_DIA_LABORAL)%>%
+    summarise(CONTEO=length(PERIODO))
+
+completa_promedio_acc_tipo_dia <- left_join(completa_conteo_accidentes,completa_conteo_tipo_dia,by=c("PERIODO","N_DIA_LABORAL"))
+
+completa_promedio_acc_tipo_dia$promedio_acc_dia <-round( completa_promedio_acc_tipo_dia$CONTEO.x/completa_promedio_acc_tipo_dia$CONTEO.y,0)
+write.csv(completa_promedio_acc_tipo_dia, "completa_promedio_acc_tipo_dia.csv", row.names = FALSE)
+```
+
+```{r}
+completa_conteo_accidentes_f_impo <- data2 %>%
+    select(Fechas.importantes)%>%
+    group_by(Fechas.importantes)%>%
+    summarise(CONTEO=length(Fechas.importantes))
+
+completa_conteo_accidentes_f_impo<-na.omit(completa_conteo_accidentes_f_impo)
+
+completa_conteo_accidentes_f_impo<-completa_conteo_accidentes_f_impo[order(-completa_conteo_accidentes_f_impo$CONTEO),]
+
+completa_conteo_accidentes_f_impo<-head(completa_conteo_accidentes_f_impo,10)
+write.csv(completa_conteo_accidentes_f_impo, "completa_conteo_accidentes_f_impo.csv", row.names = FALSE)
+```
+
+AnÃ¡lisis por comuna
+
+```{r}
+#accidentalidad <- read.csv("accidentalidad_enriquecida2.csv", header=TRUE, sep=",")
+accidentalidad<-readRDS(file="accidentalidad_enriquecida2.rds", refhook = NULL)
+
+
+accidentalidad_comuna <- subset(accidentalidad, subset=(COD_COMUNA_V2 %in% c(1:16)))
+#write.csv(accidentalidad_comuna, "accidentalidad_comuna.csv", row.names = FALSE)
+saveRDS(accidentalidad_comuna, file = "accidentalidad_comuna.rds", ascii = FALSE, version = NULL, compress = TRUE, refhook = NULL)
+
+
+```
+
+```{r}
+gauge_gravedad<-data2[,c("BARRIO","GRAVEDAD")] %>% 
+    select(GRAVEDAD)%>%
+    group_by(GRAVEDAD)%>%
+    summarise(CONTEO=length(GRAVEDAD))
+
+gauge_gravedad$TOTAL<-nrow(data2)-1
+gauge_gravedad$PORCENTAJE<- round(((gauge_gravedad$CONTEO/gauge_gravedad$TOTAL)*100),1)
+
+g_gravedad_herido<-subset(gauge_gravedad,subset = (gauge_gravedad$GRAVEDAD=="Herido"))
+write.csv(g_gravedad_herido, "g_gravedad_herido.csv", row.names = FALSE)
+g_gravedad_Muerto<-subset(gauge_gravedad,subset = (gauge_gravedad$GRAVEDAD=="Muerto"))
+write.csv(g_gravedad_Muerto, "g_gravedad_Muerto.csv", row.names = FALSE)
+g_gravedad_SoloDanos<-subset(gauge_gravedad,subset = (gauge_gravedad$GRAVEDAD=="Solo danos"))
+write.csv(g_gravedad_SoloDanos, "g_gravedad_SoloDanos.csv", row.names = FALSE)
+```
+
